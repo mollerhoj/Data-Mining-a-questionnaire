@@ -1,5 +1,5 @@
-Datamining a questionaire
-=========================
+Data Mining a questionnaire
+===========================
 by Jens Dahl Mollerhoj
 
 This project was made as a mandatory individual assignment for the 2013 Data Mining course at the IT-university.
