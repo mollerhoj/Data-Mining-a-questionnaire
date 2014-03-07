@@ -8,6 +8,7 @@ This project was made as a mandatory individual assignment for the 2013 Data Min
 
 * 2 different preprocessing methods: Missing values, Normalization
   done.
+
 * 1 frequent pattern mining method: Apriori
   done.
 * 1 Clustering method: kMean
