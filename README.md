@@ -54,14 +54,13 @@ was normalised using the following z-score formula:
 
   for_all_values(i - mean(i)) / standard_deviation(all).
 
-### What two students have answered most alike?
+### Is is possible to detect fraud by looking at frequent patterns?
 The frequent pattern mining method Apriori was used. The values of the numerical data was not normalised for for this question, since outliers aren't a problem for Apriori. 
 
-The output reads: 20 of 66 students has these values alike:
+Looking at the output (in the appendix), one can see that there at 4 pairs of students that share 9 answers. Since the values are categorial, they are quite likely to be the same. Noone of the testruns reveals any patterns that surgest fraud. It is however, quite interesting to see how many of the answers are the same. On the question of favorite animal, the answers given are almost exclusively "elephant" or "zebra".
 
-[frozenset(['sql: True', 'APriori: False', 'vectorMachine: False', 'FavAnimal: ELEPHANT']), frozenset(['sql: True', 'neuralNetwork: True', 'APriori: False', 'vectorMachine: False']), frozenset(['winter: True', 'sql: True', 'APriori: False', 'vectorMachine: False']), frozenset(['OS: windows', 'sql: True', 'APriori: False', 'vectorMachine: False']), frozenset(['MoreMtns: True', 'sql: True', 'APriori: False', 'vectorMachine: False'])]
-
-As the results show, quite a lot of the students has given the same answers.
+5 of 56 students has answered the same to all these questions:
+'winter: True', 'FavAnimal: ELEPHANT', 'FavSQLServ: mysql', 'sql: True', 'neuralNetwork: True', 'APriori: False', 'vectorMachine: False'
 
 ### Is it possible to detect weather or not a student is bored with winter based on their answers?
 The supervised learning method "k nearest neighbours" were used to answer this question.
