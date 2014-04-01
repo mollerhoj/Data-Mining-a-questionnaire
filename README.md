@@ -7,12 +7,6 @@ This project was made as a mandatory individual assignment for the 2013 Data Min
 The following is a 'Project report'. (I have to make one for my course, if you
 want to keep your sanity, I would stop reading now.)
 
-TODO:
-Use cleaning and processing on kMeans and kNN.
-Fix clean_int and clean_float to actually yield Nan
-Normalize data in the two next methods
-Put it all into folders: examples, lib etc.
-
 Project report
 ==============
 ## Introduction, focus and learning goals
@@ -46,7 +40,7 @@ The values of the attributes "SqRoot", "Georgios_middleName", "JulianHome" and "
 
 The attribute "therbforttglag" simply didn't make any sense, thus is was also removed.
 
-The random integers were not removed. Even though their values might seem useless, they says something about the psychology of the programmers.
+The random integers were not removed. Even though their values might seem useless, they say something about the psychology of the programmers.
 
 ### Data Cleaning:
 
@@ -61,46 +55,39 @@ was normalised using the following z-score formula:
   for_all_values(i - mean(i)) / standard_deviation(all).
 
 ### What two students have answered most alike?
-The values of the numerical data was not normalised for for this question, Since outliers does not matter. The frequent pattern mining method Apriori was used.
-The following values were found:
+The frequent pattern mining method Apriori was used. The values of the numerical data was not normalised for for this question, since outliers aren't a problem for Apriori. 
 
 The output reads: 20 of 66 students has these values alike:
 
 [frozenset(['sql: True', 'APriori: False', 'vectorMachine: False', 'FavAnimal: ELEPHANT']), frozenset(['sql: True', 'neuralNetwork: True', 'APriori: False', 'vectorMachine: False']), frozenset(['winter: True', 'sql: True', 'APriori: False', 'vectorMachine: False']), frozenset(['OS: windows', 'sql: True', 'APriori: False', 'vectorMachine: False']), frozenset(['MoreMtns: True', 'sql: True', 'APriori: False', 'vectorMachine: False'])]
+
 As the results show, quite a lot of the students has given the same answers.
 
-Conclusions?
-A remarkable amount of students has answered the same in many of the questions. 
-
-### Is it possible to detect a students age based on their answers?
+### Is it possible to detect weather or not a student is bored with winter based on their answers?
 The supervised learning method "k nearest neighbours" were used to answer this question.
 
-As the results show...
-### What types of students are taking this course?
-Clustering method "k means" were used to answer this question.
+by sampling random from the data, 50 of the tuples were used of training and 6 tuples were used for testing. After 10 runs, the results ranged from 66.7% to 100% percent accuracy.
 
-As the results show...
+As this might be due to overfitting, I ran the algoritm with 36 training tuples and 30 test tuples. The accuracy. This indicates (strange as it may sound) that there is actually some kind of relationship between the answers of the students and whether or not they are bored with winter.
+
+### What types of students are taking this course?
+I tried using the clustering method "k means" to answer this question. After trying to split the students into 2,3,4,5,6,7 and 8 clusters based on their answers, I have found no meaningful way to devide the students based on all the data.
+
 ### The implementation
-The code (scripts) used to answer my questions can be found in the "examples" folder. If anyone would dare to use this tiny library, the scripts in this folder serves as good examples of use. The algorithms themselves are located in the "lib" folder. The somewhat abandoned set of unit tests are kept in the "spec" folder.
+The code (scripts) used to answer my questions can be found in the file appended with the '_Test' ending. If anyone would dare to use this tiny library, the scripts in these files as good examples of use. The algorithms themselves are in files called the name of the algorithm. The somewhat abandoned set of unit tests are kept in files appended with the "spec" ending.
 
 As mentioned, all my code is python. I heavily use the pandas library and also the numpy library. I chose python because I knew that it is one of the preferred languages for machine learning and data mining, and I knew that it would be an easy language to learn.
 
 In order to run the example scripts, run the following commands
-* python examples/kMeansTest.py
-* python examples/???.py
-* python examples/???.py
+
+* python kMeans_Test.py
+* python kNN_Test.py
+* python Apriori_Test.py
 
 All examples loads data from the data/survey2014.csv file. The output is a print that describes the results
 
-### The results I have reached
-The conclusions that can be drawn from the above, formal results.
-Two students seems to have answered almost the same to many of the problems. This could be a coincidence.
-The age of a new student seems to be quite hard to detect.
-
 ### The problems I have had
-(including the dirtiness of 
-the dataset)
+The dataset was very small, and quite dirty. A lot of the data had to be removed because of meaningless questions and fake answers. Of the remaining data, none of the features have obvious relations. Since many of the features are based very subjective there is not a lot of obvious patterns. It is very interesting to see how questions such as faviorte animal leads to a lot of similar answers.
 
-The pandas library has been very hard to grasp for some reason.
-
+### License
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE: www.wtfpl.net

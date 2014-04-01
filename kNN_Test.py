@@ -113,8 +113,8 @@ learn = df.iloc[2:]
 a = kNN.kNN()
 
 k = 6
-t1 = 50
-t2 = 6
+t1 = 36
+t2 = 30
 
 #shuffle
 

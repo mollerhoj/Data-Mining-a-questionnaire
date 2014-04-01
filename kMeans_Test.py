@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import kMeans 
+import kMeans
 import Preprocesser
 import Normalizer
 
