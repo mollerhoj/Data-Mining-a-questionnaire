@@ -70,7 +70,9 @@ As this might be due to overfitting, I ran the algoritm with 36 training tuples 
 I tried using the clustering method "k means" to answer this question. After trying to split the students into 2,3,4,5,6,7 and 8 clusters based on their answers, I have found no meaningful way to devide the students based on all the data.
 If one does clustering on 2 features, such as age and programmingskill,university years or english skills, the data reveals one cluster, but only one:
 
-![programming](https://github.com/mollerhoj/Data-Mining-a-questionnaire/blob/master/images/engSkill.png "text")
+https://github.com/mollerhoj/Data-Mining-a-questionnaire/blob/master/images/engSkill.png)
+https://github.com/mollerhoj/Data-Mining-a-questionnaire/blob/master/images/progSkill.png)
+https://github.com/mollerhoj/Data-Mining-a-questionnaire/blob/master/images/uni_yrs.png)
 
 ### The implementation
 The code (scripts) used to answer my questions can be found in the file appended with the '_Test' ending. If anyone would dare to use this tiny library, the scripts in these files as good examples of use. The algorithms themselves are in files called the name of the algorithm. The somewhat abandoned set of unit tests are kept in files appended with the "spec" ending.
