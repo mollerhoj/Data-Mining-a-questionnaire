@@ -1,3 +1,5 @@
+import random
+
 class kNN(object):
 
   def distance(self,element,reference):
@@ -25,6 +27,13 @@ class kNN(object):
 
   # UGLY:
   def classify_count(self,df,t1,t2,k):
+    #shuffle:
+    rows = df.index
+    row_count = len(rows)
+    rows = list(df.index)
+    random.shuffle(rows)
+    df = df.reindex(rows)
+
     training = df[0:t1]
     test = df[t1:min(3000,t1+t2)]
 

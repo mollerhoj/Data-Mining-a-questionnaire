@@ -1,0 +1,70 @@
+Data Mining a questionnaire
+===========================
+by Jens Dahl Mollerhoj
+
+This project was made as a mandatory individual assignment for the 2013 Data Mining course at the IT-university.
+
+The following is a 'Project report'. (I have to make one for my course, if you
+want to keep your sanity, I would stop reading now.)
+
+Project report
+==============
+## Introduction, focus and learning goals
+This is report documents a tiny datamining project in which I try to answer some basic questions based on the answers given in the questionarie described below.
+I have used this project to get a feeling for the basic concepts used in datamining. As this is the first python code I have ever written, I might not count as an execptionally well coded project. After trying to be as object-orientented as working in Ruby has made me used to, I ended up with a rather un-idiomatic solution. After quite a bit for refactoring (and after giving up on providing a decent amount of unit tests, I finally arived with what I believe is atleast readable python code. I have had a lot of focus on getting a understanding of the pandas library. The library is praised as a defacto standard for handling data in python, however, it has been a surpricingly difficult experience for me to grok the API. I feel like there is still at lot to be learned (especially in regards to the scipy library) in order to feel confident using python as a datamining / machine learning tool.
+
+## The questions I try to answer
+### What students have answered most alike, and how similar are their answers?
+The results could be used to detect fraud. Also, it gives in insight into how similar 'minded' a small number of programmers can be.
+
+Why is it interesting. What applications could it have for other types of data?
+Apriori
+
+### Is it supposible to detect a students age based on their answers?
+Since the dawn of time, the older generation have claimed to have a more mature than the youth. But in the world of programming, does age have anything to say?
+
+### What types of students are taking this course? and what questions are causing a devision?
+A quite loose question. But 
+
+## The methods used
+My general approach has been to focus alot on the stucture of the data. There is not a lot of data, so it is very important to throw as little away as possible. However, since the data is very dirty, most of it must be cleaned, and some is downright meaningless, and therefore has to be thrown away.
+
+The small amount of data makes is possible to get a good overview, that yields insight into where it needs cleaning. This has proven to be extremly valuable. For a larger dataset, I would definatly use some random sampling to get a smaller chuck of data that I could use to guide my cleaning approach.
+
+Since it has been so important to throw as little as possible away, I have chosen to preprocess the data with custom procedures before using the datamining techniques.
+
+### What two students have answered most alike?
+Preprocessing:
+Cleaning: What values have been cleaned and how?
+Normalization: Same
+Data Reduction: What values have been thrown away and why?
+Algorithm.
+frequent pattern mining method: Apriori
+Results
+Please include numerical results and preferably also 
+graphs
+
+### Is it supposible to detect a students age based on their answers?
+* 1 Supervised learning method: kNN?
+  done.
+### What types of students are taking this course?
+
+* 1 Clustering method: kMean
+  done.
+
+### The implementation
+The code (scripts) used to answer my questions can be found in the "examples" folder. If anyone would dare to use this tiny library, the scripts in this folder serves as good examples of use. The algoritms themselves are located in the "lib" folder. The somewhat abandoned set of unit tests are kept in the "spec" folder.
+
+As mentioned, all my code is python. I heavily use the pandas library and also the numpy library. I chose python because I knew that it is one of the prefered languages for machine learing and datamining, and I knew that it would be an easy language to learn.
+
+A description of the implementation. Why python, What is the value of the
+pandas library
+
+### The results I have reached
+The conclusions that can be drawn from the above, formel results.
+
+### The problems I have had
+(including the dirtiness of 
+the dataset)
+
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE: www.wtfpl.net

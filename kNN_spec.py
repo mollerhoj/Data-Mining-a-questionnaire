@@ -43,7 +43,7 @@ class kNN_spec(unittest.TestCase):
     self.assertEqual(r,'c')
 
   def test_classify(self):
-    element = ['a','b','c']
+    element = ['a','b']
     df = pd.DataFrame([['a','x','x'],
                        ['a','b','c'],
                        ['x','x','x']],None,['a1','a2','a3'])

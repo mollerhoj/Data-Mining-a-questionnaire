@@ -1,18 +1,8 @@
-#Normalize TODO: Own module
-
-def z_score():
-  return 0
-
-def mean_absolute_deviation():
-  return 0
-
-def normalize(attribute):
-  return 0
-
 #kMeans
 import random
 import pandas as pd
 import numpy as np
+from pandas.util.testing import assert_frame_equal
 
 import matplotlib as plt
 
@@ -68,17 +58,24 @@ def train_loop(df,k,centers,loop_n):
   step = 1
   for i in range(loop_n):
     clusters = create_clusters(centers)
+
     clusters = assign_clusters(df,clusters,centers)
+    old_centers = centers
     centers = find_centers(clusters)
 
-    print("STEP: " + str(step))
-    print("centers:")
-    print(centers)
-    print("clusters:")
-    print(clusters)
+    #return if we have not moved
+    if frames_equal(centers,old_centers):
+      return centers
 
     step += 1
   return centers
 
 def classify(element):
   return 2
+
+def frames_equal(f1,f2):
+    try: 
+      assert_frame_equal(f1, f2)
+    except:
+      return False
+    return True

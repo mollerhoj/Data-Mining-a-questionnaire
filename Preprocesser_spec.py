@@ -11,4 +11,6 @@ class Preprocesser_spec(unittest.TestCase):
     number = self.p.clean_float(text)
     self.assertEqual(2.34,number)
 
+  
+
 unittest.main()
