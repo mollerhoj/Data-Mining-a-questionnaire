@@ -110,8 +110,8 @@ for i in range(len(df)):
     f.add(c)
   r += [f]
 
-#print "The output reads: 20 of 66 students has these values alike:"
+print "The output reads: 20 of 66 students has these values alike:"
 a = Apriori.Apriori()
 for i in range(20):
   print str(20-i)
-  #print a.find(r,20-i)
+  print a.find(r,20-i)
